@@ -26,15 +26,15 @@ import java.util.Scanner;
 public class ChristmasTreeDrawer {
 
     public static void main(String[] args) {
-        int sizeOfATree = getSizeOfATree();
+        int heightOfATree = getSizeOfATree();
 
-        for (int i = sizeOfATree; i > 0; i--) {
+        for (int i = heightOfATree; i > 0; i--) {
             drawSpacesBeseOnHeigh(i);
-            drawNumberOfAsterisks(2*(sizeOfATree - i));
+            drawNumberOfAsterisks(2*(heightOfATree - i));
             drawLineBreak();
         }
         //draw #
-        drawTrunk(sizeOfATree);
+        drawTrunk(heightOfATree);
     }
 
     private static int getSizeOfATree() {

@@ -10,26 +10,25 @@ public class PalindromeDetector {
 
     public static void main(String[] args) {
 
-        String input = "Kobyła ma maały bok";
+        String input = "Kobyła ma mały bok";
 
         input = input.toLowerCase().replace(" ", "");
 
         System.out.println(input);
 
-        boolean result = isFirstCharSameAsLastChar(input);
+        boolean result = checkIfStringIsPalindromeRecursively(input);
         System.out.println(result);
 
     }
 
-    private static boolean isFirstCharSameAsLastChar(String input) {
-
+    private static boolean checkIfStringIsPalindromeRecursively(String input) {
         if(input.length() <= 1){
             return true;
         }
         if (input.charAt(0) == input.charAt(input.length()-1)) {
             String inputWithoutFirstAndLastChar = input.substring(1, input.length()-1);
             System.out.println(inputWithoutFirstAndLastChar);
-            return isFirstCharSameAsLastChar(inputWithoutFirstAndLastChar);
+            return checkIfStringIsPalindromeRecursively(inputWithoutFirstAndLastChar);
         } else {
             return false;
         }
