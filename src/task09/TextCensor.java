@@ -25,7 +25,7 @@ public class TextCensor {
 
         var input = "Znów się nie kompiluje, wtf!";
 
-        String[] curses = new String[]{
+        String[] curses = {
                 "kurka wodna",
                 "motyla noga",
                 "psiakrew",
